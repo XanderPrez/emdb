@@ -1,0 +1,45 @@
+@import "./../../libs/utils.scss";
+
+$gap: 30px;
+
+.search {
+  label {
+    font-size: 0.8em;
+    display: block;
+    margin-bottom: 7px;
+  }
+
+  input {
+    display: block;
+
+    @include input;
+  }
+}
+
+.list {
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: $gap 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: $gap;
+    row-gap: $gap;
+
+    li {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,27 @@
+@import "./../../libs/utils.scss";
+
+.form {
+  .row {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+
+    input {
+      @include input;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+
+      @include input;
+    }
+  }
+
+  .actions {
+    margin-top: 50px;
+  }
+}

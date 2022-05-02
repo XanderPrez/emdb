@@ -1,0 +1,41 @@
+$main: #0070f3;
+$light: #999;
+
+main {
+  margin: 0;
+  padding: 0 30px;
+}
+
+@mixin input {
+  border: 1px solid $light;
+  outline: none;
+  font-size: 0.8em;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 7px;
+  color: #333;
+  font-style: italic;
+  transition: all 0.4s ease;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: $main;
+    box-shadow: 0px 0px 10px lighten($main, 25%);
+    color: $main;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
